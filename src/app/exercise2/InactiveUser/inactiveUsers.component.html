@@ -1,0 +1,10 @@
+<div class="container panel panel-default" *ngFor="let user of inactiveUsersArray; let i = index">
+    <div class="row panel-heading" [ngClass]="{inactive : true}">
+        <div class="col-sm-2">User name: {{user.userName}}</div>
+        <div class="col-sm-3">
+            <p>Status ({{user.userStatus}}) |
+                <a href="#" (click)="setToActive(i)">Set to Active</a>
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="container" *ngIf="!getEmptyArray(); else noActiveUsers">
+    <div class="panel panel-default" *ngFor="let user of activeUsersArray; let i = index">
+        <div class="row panel-heading" [ngClass]="{active : true}">
+            <div class="col-sm-2">User name: {{user.userName}}</div>
+            <div class="col-sm-3">
+                <p>Status ({{user.userStatus}}) |
+                    <a href="#" (click)="setToInactive(i)">Set to Inactive</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #noActiveUsers>
+    <h1>noActiveUsers</h1>
+</ng-template>
