@@ -17,6 +17,4 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.accountNewArray = this.dataAccount.accountsArray;
   }
-
-  /*exercise2*/
 }
